@@ -1,5 +1,25 @@
-Lizenzierung noch festzulegen.
+Lizenzübersicht
 
+Historische Quelle
 Das historische Werk von Hermann Friedrich Jellinghaus ist gemeinfrei.
-Für Website-Code, redaktionelle Daten und Tonaufnahmen werden vor der
-öffentlichen Freigabe getrennte Lizenzangaben ergänzt.
+Auf seine gemeinfreien Inhalte werden keine zusätzlichen Einschränkungen gelegt.
+
+Redaktionelle Daten und Tonaufnahmen: Freigabe noch ausstehend
+Vorgesehen ist Creative Commons Namensnennung 4.0 International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+Gerhard Heining muss der Lizenzierung seiner Aufarbeitung und Tonaufnahmen
+noch zustimmen. Für diese Beiträge ist dies ein Lizenzvorschlag, keine bereits
+erteilte Nutzungserlaubnis. Vorhandene FLAC-Dateien sind derzeit Test-/Dummydaten.
+Gemeinfreie Inhalte bleiben unabhängig von diesem Vorschlag frei nutzbar.
+
+Eigener Website-Code und eigene Build-/Suchwerkzeuge
+MIT-Lizenz; vollständiger Text in LICENSE-CODE.txt.
+Diese Lizenz gilt nicht für Wörterbuchdaten, Aufnahmen oder Fremdkomponenten.
+
+Schrift Charis
+SIL Open Font License 1.1; Text in web/assets/fonts/OFL-Charis.txt.
+
+Automatische Suchanreicherungen
+Kategorien und Ähnlichkeitsvorschläge sind KI-generiert, nicht fachlich geprüft
+und getrennt von den Quellen- und redaktionellen Stammdaten zu behandeln.
+Für verwendete Modelle und weitere Fremdkomponenten gelten deren eigene Lizenzen.
