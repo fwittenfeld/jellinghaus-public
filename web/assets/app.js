@@ -65,13 +65,10 @@ function searchScore(entry, query) {
   return best <= limit ? { score: 10 + best, fuzzy: true } : null;
 }
 
-function sourceHtml(entry, audioAsButton = true) {
+function sourceHtml(entry) {
   return entry.sourceParts.map((part, index) => {
     const separator = index ? ", " : "";
     if (!part.wbck) return `${separator}<span>${escapeHtml(part.text)}</span>`;
-    if (entry.hasAudio && audioAsButton) {
-      return `${separator}<button class="audio-word" type="button" data-audio-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(part.text)} anhören">${escapeHtml(part.text)}</button>`;
-    }
     return `${separator}<strong>${escapeHtml(part.text)}</strong>`;
   }).join("");
 }
@@ -113,15 +110,16 @@ function visibleEntries() {
 function entryHtml({ entry, match }) {
   return `
     <article class="entry" id="wort-${escapeHtml(entry.id)}">
-      <div class="entry-main">
-        <div class="entry-source">${sourceHtml(entry)}</div>
-        <div class="entry-target">${escapeHtml(entry.target || "–")}</div>
+      <button class="entry-main" type="button" data-entry-id="${escapeHtml(entry.id)}"
+              aria-label="Details zu ${escapeHtml(entry.source)} anzeigen">
+        <div class="entry-line">
+          <span class="entry-source">${sourceHtml(entry)}</span>
+          <span class="entry-separator" aria-hidden="true"> – </span>
+          <span class="entry-target">${escapeHtml(entry.target || "–")}</span>
+        </div>
         ${match.fuzzy ? '<span class="match-note">Ähnlicher Treffer</span>' : ""}
-      </div>
-      <div class="entry-actions">
-        ${entry.hasAudio ? `<button class="icon-button audio-button" type="button" data-audio-id="${escapeHtml(entry.id)}" aria-label="Aussprache von ${escapeHtml(entry.source)} abspielen" title="Aussprache abspielen">▶</button>` : ""}
-        <button class="icon-button detail-button" type="button" data-entry-id="${escapeHtml(entry.id)}" aria-label="Details zu ${escapeHtml(entry.source)} anzeigen" title="Details anzeigen">i</button>
-      </div>
+      </button>
+      ${entry.hasAudio ? `<button class="icon-button audio-button" type="button" data-audio-id="${escapeHtml(entry.id)}" aria-label="Aussprache von ${escapeHtml(entry.source)} abspielen" title="Aussprache abspielen">▶</button>` : ""}
     </article>`;
 }
 
@@ -170,17 +168,16 @@ function playEntry(entry, button) {
 
 function showDetails(entry) {
   const rows = [
-    ["Buchseite", entry.page],
-    ["Quelle im Buch", entry.bookSource],
-    ["Ziel im Buch", entry.bookTarget],
-    ["Vollständiger Rohwert", entry.raw],
-    ["Verweise", entry.references],
+    ["Seitenzahl", entry.page],
+    ["Plattdeutsch", entry.bookSource],
+    ["Übersetzung", entry.bookTarget],
   ].filter(([, value]) => value);
   elements.dialogContent.innerHTML = `
     <div class="dialog-body">
       <p class="eyebrow">Wörterbucheintrag · Seite ${escapeHtml(entry.page)}</p>
-      <h2 id="dialogTitle">${sourceHtml(entry, false)}</h2>
+      <h2 id="dialogTitle">${sourceHtml(entry)}</h2>
       <p class="dialog-target">${escapeHtml(entry.target || "–")}</p>
+      <h3>Schreibweise in der Buchvorlage</h3>
       <dl class="detail-grid">${rows.map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd>`).join("")}</dl>
       <a class="text-link" href="${escapeHtml(entry.archiveUrl)}" target="_blank" rel="noopener">Buchseite im Internet Archive öffnen <span aria-hidden="true">↗</span></a>
     </div>`;
