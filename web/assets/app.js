@@ -1,6 +1,6 @@
 "use strict";
 
-const state = { entries: [], meta: {}, query: "", letter: "Alle", audioOnly: false, currentAudioButton: null };
+const state = { entries: [], meta: {}, query: "", letter: "Alle", topic: "", audioOnly: false, currentAudioButton: null };
 const collator = new Intl.Collator("de-DE", { sensitivity: "base" });
 const elements = {};
 
@@ -47,16 +47,24 @@ function prepareEntry(entry) {
   const source = normalize(entry.source);
   const target = normalize(entry.target);
   const bookSource = normalize(entry.bookSource);
-  const words = [...new Set(`${source} ${target} ${bookSource}`.split(" ").filter(Boolean))];
-  return { ...entry, _source: source, _target: target, _search: `${source} ${target} ${bookSource}`, _words: words, _letter: letterKey(entry.source) };
+  const modern = normalize(entry.modernMeaning || entry.target);
+  const search = [source, target, bookSource, normalize(entry.bookTarget), modern, ...(entry.searchAliases || []).map(normalize)].join(" ");
+  const semantic = [...(entry.semanticTerms || []), ...(entry.topics || []).map(id => state.meta.topics?.[id] || "")].map(normalize);
+  const words = [...new Set(search.split(" ").filter(Boolean))];
+  return { ...entry, _source: source, _target: target, _modern: modern, _search: search, _semantic: semantic, _words: words, _letter: letterKey(entry.source) };
 }
 
 function searchScore(entry, query) {
   if (!query) return { score: 0, fuzzy: false };
-  if (entry._source === query || entry._target === query) return { score: 0, fuzzy: false };
+  if (entry._source === query || entry._target === query || entry._modern === query) return { score: 0, fuzzy: false };
   if (entry._source.startsWith(query)) return { score: 1, fuzzy: false };
   if (entry._target.startsWith(query)) return { score: 2, fuzzy: false };
   if (entry._search.includes(query)) return { score: 3, fuzzy: false };
+  const queryWords = query.split(" ");
+  if (entry._semantic.some(term => term === query)
+      || queryWords.every(word => entry._semantic.some(term => term.split(" ").includes(word)))) {
+    return { score: 5, fuzzy: false, semantic: true };
+  }
   if (query.length < 3) return null;
 
   const limit = query.length <= 5 ? 1 : query.length <= 9 ? 2 : 3;
@@ -96,6 +104,7 @@ function visibleEntries() {
   const query = normalize(state.query);
   return state.entries
     .filter((entry) => !state.audioOnly || entry.hasAudio)
+    .filter((entry) => !state.topic || (entry.topics || []).includes(state.topic))
     .filter((entry) => state.letter === "Alle" || entry._letter === state.letter)
     .map((entry) => ({ entry, match: searchScore(entry, query) }))
     .filter((item) => item.match)
@@ -112,12 +121,13 @@ function entryHtml({ entry, match }) {
     <article class="entry" id="wort-${escapeHtml(entry.id)}">
       <button class="entry-main" type="button" data-entry-id="${escapeHtml(entry.id)}"
               aria-label="Details zu ${escapeHtml(entry.source)} anzeigen">
-        <div class="entry-line">
+        <span class="entry-line">
           <span class="entry-source">${sourceHtml(entry)}</span>
           <span class="entry-separator" aria-hidden="true"> – </span>
           <span class="entry-target">${escapeHtml(entry.target || "–")}</span>
-        </div>
+        </span>
         ${match.fuzzy ? '<span class="match-note">Ähnlicher Treffer</span>' : ""}
+        ${match.semantic ? '<span class="match-note">Thematisch passend</span>' : ""}
       </button>
       ${entry.hasAudio ? `<button class="icon-button audio-button" type="button" data-audio-id="${escapeHtml(entry.id)}" aria-label="Aussprache von ${escapeHtml(entry.source)} abspielen" title="Aussprache abspielen">▶</button>` : ""}
     </article>`;
@@ -189,6 +199,9 @@ function bindEvents() {
   elements.search.addEventListener("input", () => { state.query = elements.search.value; state.letter = "Alle"; renderAlphabet(); renderDictionary(); });
   elements.clearSearch.addEventListener("click", () => { elements.search.value = ""; state.query = ""; renderDictionary(); elements.search.focus(); });
   elements.audioOnly.addEventListener("change", () => { state.audioOnly = elements.audioOnly.checked; renderDictionary(); });
+  elements.topicFilter.addEventListener("change", () => {
+    state.topic = elements.topicFilter.value; state.letter = "Alle"; renderAlphabet(); renderDictionary();
+  });
   elements.alphabet.addEventListener("click", (event) => {
     const button = event.target.closest("[data-letter]");
     if (!button) return;
@@ -219,7 +232,7 @@ function bindEvents() {
 }
 
 async function init() {
-  for (const id of ["search", "clearSearch", "audioOnly", "resultCount", "alphabet", "dictionary", "loadError", "entryDialog", "dialogContent", "audioPlayer", "statEntries", "statAudio", "statPages", "statUpdated", "archiveSourceLink"]) elements[id] = document.getElementById(id);
+  for (const id of ["search", "clearSearch", "audioOnly", "topicFilter", "resultCount", "alphabet", "dictionary", "loadError", "entryDialog", "dialogContent", "audioPlayer", "statEntries", "statAudio", "statPages", "statUpdated", "archiveSourceLink"]) elements[id] = document.getElementById(id);
   bindEvents();
   try {
     const response = await fetch("data/dictionary.json");
@@ -227,6 +240,11 @@ async function init() {
     const payload = await response.json();
     state.meta = payload.meta;
     state.entries = payload.entries.map(prepareEntry);
+    const topicCounts = new Map();
+    state.entries.forEach(entry => (entry.topics || []).forEach(id => topicCounts.set(id, (topicCounts.get(id) || 0) + 1)));
+    elements.topicFilter.innerHTML = '<option value="">Alle Themen</option>' + Object.entries(state.meta.topics || {})
+      .filter(([id]) => topicCounts.has(id))
+      .map(([id, label]) => `<option value="${escapeHtml(id)}">${escapeHtml(label)} (${topicCounts.get(id)})</option>`).join("");
     populateStats(); renderAlphabet(); renderDictionary();
     const match = location.hash.match(/^#wort-(.+)$/);
     if (match) {
