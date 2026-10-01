@@ -1,1 +1,1267 @@
-{"version":1,"entries":{}}
+{
+  "version": 2,
+  "entries": {
+    "lr_0117_001": {
+      "fingerprint": "fdb407bae68660be9da5938e99c0becf0cc7296e9bd26c0c95376ca737fc0bce",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "gefuehle"
+      ],
+      "terms": []
+    },
+    "lr_0117_020": {
+      "fingerprint": "accc86b38d9dbf7ebd8f6df12a8bc40bf8a9167854f21ab6b91b0850b7ed56b8",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0117_039": {
+      "fingerprint": "b656025892af9215b17ef05509aedec8361501d58dd0183569e1aca9d075e33e",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0118_004": {
+      "fingerprint": "83385aa40c10613f00734b50fa4ce84443849b993d2f477ac2219178bffcc2d8",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0118_023": {
+      "fingerprint": "02739659e593564599a69729de0487c24392eae4a9713e93a928487de82b0d9f",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0118_042": {
+      "fingerprint": "4165abd3bf64341dafe24fe0032cf929d9ec5340cf8af935e1a9e665a49f50b1",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0118_062": {
+      "fingerprint": "64353aad73857a0b483bf3575dcaf81f1fd64f84176ad596283c88905904ad33",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0119_003": {
+      "fingerprint": "4b0013bc43e51d35beaeb74232d490947968a196f4912f9b2f516cc28825f977",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0119_022": {
+      "fingerprint": "3bc2da1874635c8721b6e5e837f25e6f056a6b0efafe5a2a7ccbd492c75a8288",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "tiere"
+      ],
+      "terms": [
+        "Fisch",
+        "Fische",
+        "Tier",
+        "Tiere",
+        "Wassertier"
+      ]
+    },
+    "lr_0119_042": {
+      "fingerprint": "50aff0134a8fa5d1d49222847397fbda56b396effaeae8ca665a0a7b3cf71384",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "gefuehle"
+      ],
+      "terms": []
+    },
+    "lr_0119_061": {
+      "fingerprint": "201b025bdd0e450bf467e5857eefc4abdb6b515b557c11478bc87b592eba9bab",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0120_010": {
+      "fingerprint": "c48740422b8ee2c00547eb2bddd990e7aafa48d70cc0fac93dbcf43e966b4284",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "landwirtschaft"
+      ],
+      "terms": [
+        "Ackerbau"
+      ]
+    },
+    "lr_0120_029": {
+      "fingerprint": "6823a85a8e37a982dca337a736651800658ac16fe0c6c3abfb47c50b57c22a9d",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "bewegung"
+      ],
+      "terms": []
+    },
+    "lr_0120_048": {
+      "fingerprint": "2d577726131e8e6cc9bb7f7266a2fa6646b7da73247ea9ef2876de565e16cf5c",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0120_068": {
+      "fingerprint": "acf65bee989b94a0ca83cba399238e533a121013c665c4055aa701d72ae90a95",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0121_017": {
+      "fingerprint": "d440e8c573147b4c9ceda914182d25dbb7e7a5565bc4815a2d288d0ae4c61ea9",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0121_036": {
+      "fingerprint": "5498520422652733378c377aca79cf9c958c20b2b35ab9181c23cb2d1df77a88",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "kleidung",
+        "landwirtschaft"
+      ],
+      "terms": [
+        "Ackerbau",
+        "Bekleidung"
+      ]
+    },
+    "lr_0121_056": {
+      "fingerprint": "6505a4cfe1e83b857b27960c43051ebcdae0eb7612ced09d68eae79a3f3f7a75",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0122_002": {
+      "fingerprint": "c87d5ec72c7d396998d9b5347a618961e8b281bd2370812117a7a31775ea8d11",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "essen",
+        "haus"
+      ],
+      "terms": [
+        "Essen",
+        "Lebensmittel",
+        "Möbel"
+      ]
+    },
+    "lr_0122_022": {
+      "fingerprint": "21f4292ace690a7c3bdfe983e722d8fb85e2e8edd232a53669e45f8a8cf6449b",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0122_041": {
+      "fingerprint": "417db5648a3bf6ad93bbc08258e6595ec11ff674ca3915b5e011ec349495ae20",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0122_060": {
+      "fingerprint": "c179b24773bef365620cbd547b8fa21a7d39a3fbef8d0b6c2618ff0056b7049b",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0123_011": {
+      "fingerprint": "f2aff39840bb1a82e74ee8fac712a6d41c496671fca42e8b29f7b8f2297f0e9a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0123_030": {
+      "fingerprint": "dd7146d8dae9589fa2b77af100d06b32774e31cc3bd19fbd1bd693b5fd6216dd",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "gefuehle"
+      ],
+      "terms": []
+    },
+    "lr_0123_049": {
+      "fingerprint": "448e334bb39a07f93ff9e788e88e65acab9d422766034358bec78ca2c090d7f6",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0123_069": {
+      "fingerprint": "e1e7e3e70eeba422511622381964b1f94f4cb4090cdaccc0a4b5d27c60f5b11b",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0124_019": {
+      "fingerprint": "c93c9ef8fb971d752badb40920e893fe3e688ddda0fb38754614eac649f4cc18",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0124_039": {
+      "fingerprint": "88e9a14b6e2f856d078f9914652a496655542458d192930d3c846b96c5c78a48",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0124_058": {
+      "fingerprint": "5b543d67ce465c6b7a8bbf09807a68de57cee13874bdbcb578e926ad9bc6b0b6",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "koerper"
+      ],
+      "terms": [
+        "Körper",
+        "Körperteil"
+      ]
+    },
+    "lr_0124_077": {
+      "fingerprint": "6121f19b94964942b17d9ae4e43891189a24398da9cfd2113c026fb79e27774c",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0125_019": {
+      "fingerprint": "8c3ec055ee4ea0fc7c48ee8d5471184d16e536329eaaae17627ca7e6fb812938",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "bewegung",
+        "kleidung",
+        "landwirtschaft",
+        "tiere"
+      ],
+      "terms": [
+        "Ackerbau",
+        "Bekleidung"
+      ]
+    },
+    "lr_0125_038": {
+      "fingerprint": "ffdaf82fa11b5fe2b56666e868decd96ca289a23d03455f6c7a7b189e60ab45f",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0125_057": {
+      "fingerprint": "3fabf76b90896cf93ac0fb9405ebd1acc2be5d0574961fba0e1912c5b9221523",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0126_010": {
+      "fingerprint": "c48fbead62096dd4e8470c8c82134af90f04cfc0d70602a678b4312343d90ad7",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0126_029": {
+      "fingerprint": "79a7fc53d84b038764cdc2c7ad3dd6d2596829f57d9fa9252473733be50537f3",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0126_050": {
+      "fingerprint": "4b188f3af9851a272285f346e12ea82759f0dca4b4261cdb21ae3778098fa3de",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0126_069": {
+      "fingerprint": "919c71a8022478f75257b18837831bdc5f86dbe344f3c3357ff94f030f7fcc67",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0127_009": {
+      "fingerprint": "aea30c9cdcda07c22268bcfd0afcef5ccb35c5f5b8a5a18b8c7a51d794e2466f",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0127_029": {
+      "fingerprint": "393712dbc657b3fb53ca21509e66c86365e766286b2879c824c641a50da81b7a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0127_048": {
+      "fingerprint": "7415dbf1e6604b4ef0bd1ad2fe02df07bdb1a28ab52374d4767eed2eab0d01cb",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0127_067": {
+      "fingerprint": "a566aa980f6c5b8c7311cb704be848d52df274ed811c18f50adb800dc969649d",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0128_010": {
+      "fingerprint": "5f477f6de037627c87f010b53f195416133266814a8331f2ffae786cc92432a6",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "arbeit",
+        "landwirtschaft"
+      ],
+      "terms": [
+        "Ackerbau",
+        "Werkzeug"
+      ]
+    },
+    "lr_0128_029": {
+      "fingerprint": "cda5488c11c429da9910bc2bd8ebe27edc7a33ca0666f068b74bd391c0bbdff4",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0128_049": {
+      "fingerprint": "22215d065f8650d2a7b1d737bf3a4020fda641b7fc8e6a5fa0b4ab11306a2c41",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0128_068": {
+      "fingerprint": "350da1d803b0b7773c5f2f4878b7d416d9e0baac8f98d995cd727638ef9394db",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0129_012": {
+      "fingerprint": "2c189448c1879bb1e10418608548129c563b0893225d8c9bc72f5a2e2868241c",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0129_032": {
+      "fingerprint": "d91ac7432c292dc57b5dd36063f3903fd11e483daa8d5ae473cc52571186722a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0129_051": {
+      "fingerprint": "95aefd5c7acf37bb1a77328bcba692e7387e7a5ca68be9be1131729fb8cfae41",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0130_005": {
+      "fingerprint": "39997a842c0c48f40409e280b187c6c8b87e94ff310b27a3e06d3901fa01cf78",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0130_025": {
+      "fingerprint": "b1a6a9a989ef20d1cbc7429d2a8f6b0fa943c6c586a65db964613fb4abfab0c0",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0130_044": {
+      "fingerprint": "070129ad8c85d1a2506523030334749e36400f9035a3e575a33034bbeedc58c4",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0130_064": {
+      "fingerprint": "6265d61f592853db46053c88fe53cdf456141e6c87667bd6c2b88503b4e46298",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0131_005": {
+      "fingerprint": "12539b06e101a74ef5dcdd9daae381a6a2d1d48f6d6a5e234fb9ffa3b1ca0821",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0131_024": {
+      "fingerprint": "92e826942799a0c80a51babec86767cccf163ba1d0bcc19a151e98f6dffc63f9",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0131_044": {
+      "fingerprint": "3aa54328fa2619a1207ce19570239312ae8c031d485eb1a21adab64ef94cbffb",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "haus"
+      ],
+      "terms": [
+        "Haushalt"
+      ]
+    },
+    "hr_0131_063": {
+      "fingerprint": "4c6019c56a99347311cd084f1d9f9652a5ad11da954aa5d7ddf8f6c1667189ff",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0132_006": {
+      "fingerprint": "c2b35e4f291d4d1f1d302b9896e5f7686fc70b5e3396fb3a727e1537d4502c93",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0132_026": {
+      "fingerprint": "e32da4409777fa84e062385afe89c12cb4e1c9fc6c486cdf2acbb4283732a464",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0132_045": {
+      "fingerprint": "2a301c9a7451c13f57c1e1559ca9faebc839416e05a9aab55162ef1e4c035134",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0132_065": {
+      "fingerprint": "4a847e4830f599187bf9b85ec00d66b61fb4901c671a2176efb1a80646f1247b",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "essen"
+      ],
+      "terms": [
+        "Essen",
+        "Lebensmittel",
+        "Nahrung"
+      ]
+    },
+    "hr_0133_004": {
+      "fingerprint": "d5d56e16a4e92fd3957a4019a8c91be5f596d2dc1fc55bb84197ff2550a4f540",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0133_023": {
+      "fingerprint": "7127eef824c79eb58f45ec7d8f5e7c268d77a3e083455f640127bfe10e4d3e79",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0133_043": {
+      "fingerprint": "4c58547c4f40ddd36ec4a321e89a64a7f54e1b24d1f002e5b7945bda070e511c",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "tiere"
+      ],
+      "terms": [
+        "Vogel",
+        "Vögel"
+      ]
+    },
+    "hr_0133_062": {
+      "fingerprint": "ae8004a46c31d1a4bf62b9abc93e35ef190468c764fba5d67f1d7299ccfdf032",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0134_006": {
+      "fingerprint": "c76534251d30a6b835f727e7007e03aa778a29689bb400bd5ed6dfd7aa7635b0",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0134_026": {
+      "fingerprint": "3184f651e3f4ea48d5981dc0374d136ec6b9e41636696b5979154f1d373058aa",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0134_045": {
+      "fingerprint": "9661c865a7909698c6cd8a92a0fa7e5fdd1510f61a0b0b2458ae6ff844b818a4",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0134_065": {
+      "fingerprint": "b5e330cb2fb76ad1e58fdcdbd9b68f7046edbd22fbbc1c32c95b998a87eef3da",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0135_016": {
+      "fingerprint": "98dda1e43c8a8ec2f6173fdff27a360667b8fccf9c49788c3ca656132f5e0064",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0135_035": {
+      "fingerprint": "3d0c5f90f5826bdbb13d44bcb9bb3a85fb6f8d89d958a3e73b1df2108f3783b2",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0135_055": {
+      "fingerprint": "bfb86b06e5008704c3874a3c493e5a949d648167772f4709d8003e9f46785a8d",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "tiere"
+      ],
+      "terms": [
+        "Vogel",
+        "Vögel"
+      ]
+    },
+    "hr_0136_001": {
+      "fingerprint": "2eaa876f087be5eef0ccdeee24d0541ed95aabfce9eab5b4faa86896899496d1",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0136_020": {
+      "fingerprint": "0171d2917afc23719b5e3efd1461e0ac1ca649b819a16850916d05ec6f00c0b0",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0136_040": {
+      "fingerprint": "37deee8fbe8e1710638725a024a3e0e1fd3a1b8ebc0d605f5eafb1c0168fcbfd",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "bewegung"
+      ],
+      "terms": []
+    },
+    "hr_0136_059": {
+      "fingerprint": "1e5d02c6f804dbae15d6af2cd2ba6c47c7bf0889051125c7f639b4dd4ae35a18",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0137_011": {
+      "fingerprint": "a102cf8fa1e56154cb96e9db6c7642431f2d49f38ad7b47a19283e1d617c32d2",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0137_030": {
+      "fingerprint": "8ba8f66dd1488a17f5a5d64fe746d314cde97e80c51ea1723589c43707322914",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0137_049": {
+      "fingerprint": "ca5e9424d29c9c93f8dddb2ac67d669b0e433e3ac30b7de9ac962803f478cb65",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0137_069": {
+      "fingerprint": "cbc7791582a816ed6dc348bcbfc799391315731a48ff54b2f550e91ed7bd95e5",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0138_008": {
+      "fingerprint": "bb129a4fc8ca2b59417ebdd753f3a8afcef305de41866e9b7ff91496f6e1ecfc",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0138_027": {
+      "fingerprint": "2c66187778ff85fa78911e1d522e38fec2b523fac86d082596942072d1871b3c",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "essen"
+      ],
+      "terms": [
+        "Essen",
+        "Lebensmittel",
+        "Milchprodukt",
+        "Nahrung"
+      ]
+    },
+    "lr_0138_046": {
+      "fingerprint": "467ccdde2cc7d84875f254015811ca096a03b193630a542352d847f92709fe8a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0138_065": {
+      "fingerprint": "91d48bce889da3f076cc5b04d2c04bf93245e71872a1d770f90f876bbc20a87e",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "kleidung"
+      ],
+      "terms": [
+        "Bekleidung"
+      ]
+    },
+    "lr_0139_006": {
+      "fingerprint": "28a267f66708f61dba602a3978a90fa78a0d32c64792416a3d7946fef7567f42",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0139_026": {
+      "fingerprint": "0fbea93eba844912ec8132832232e8f314afe5a2140ce94d5bc89b0b68ded51a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0139_045": {
+      "fingerprint": "c2aeb1cbbc3a924ee87b809c03bb22e7ad4fef558bebb461df6bba44a65220a4",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "landwirtschaft"
+      ],
+      "terms": [
+        "Ackerbau"
+      ]
+    },
+    "lr_0139_065": {
+      "fingerprint": "58200ce5f1c5a45a03f3e611a0ed8aaac164b74095bae143640e5be0203a391e",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0140_005": {
+      "fingerprint": "98a8cb1c5e3bf250920e9e3c4cbcad2b035ed0ee8af8381f41d5ccf02dd202aa",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "essen"
+      ],
+      "terms": [
+        "Essen",
+        "Gemüse"
+      ]
+    },
+    "hr_0140_024": {
+      "fingerprint": "53a12b7ba5ae8da138de3763e26af3c87121c6891a37339ff080d80665ed0330",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0140_044": {
+      "fingerprint": "acc627f21bc50de83502369e3e250c18b6e4422cd5fcf0c2b6a14a9f36b8f841",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0140_063": {
+      "fingerprint": "74950bf0e6dcf2be532438de738ba03d7e11d1dd516495ce7871d5532954dc36",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "essen",
+        "landwirtschaft"
+      ],
+      "terms": [
+        "Ackerbau",
+        "Essen",
+        "Gemüse"
+      ]
+    },
+    "hr_0141_009": {
+      "fingerprint": "2e4cc7700fde7f5fdcc9b0e61ce0ffadd6c4fbf2190510297baa3a8cf676b272",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "bewegung"
+      ],
+      "terms": []
+    },
+    "hr_0141_029": {
+      "fingerprint": "8edf4420da0021c233cf7359d62f7bcd039ce508c81faa97f7093f4682fa7e8f",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0141_048": {
+      "fingerprint": "b49cc31f7d8d96caf0785df151cc6bc097159279e6cf6c1e3be7eac23338ba73",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "koerper"
+      ],
+      "terms": [
+        "Gesundheit",
+        "Körper"
+      ]
+    },
+    "hr_0141_068": {
+      "fingerprint": "14890a014536d15a3a76a004496bbfa6b9fda9c7f38a7b04310e0c674975d267",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "landwirtschaft",
+        "pflanzen"
+      ],
+      "terms": [
+        "Ackerbau"
+      ]
+    },
+    "lr_0142_013": {
+      "fingerprint": "016abd9c9cde55e307b55c5a3d932be2ef329690ed4d472c1bc29fe5c347ab09",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0142_032": {
+      "fingerprint": "fb6c55c7d9733aa59506effc95364f340cabe72455ca2102da7d9c3b9350fcd3",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0142_052": {
+      "fingerprint": "230de1f4b3ff8f1919f4e1c4b92fdd57fa37ee976380b0d53282148d27d9c00d",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0142_071": {
+      "fingerprint": "19f38a8ce244c38b84a36981e75443987932634316d79f2fa9fc55e4d6561f9c",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "essen"
+      ],
+      "terms": [
+        "Essen",
+        "Gemüse"
+      ]
+    },
+    "lr_0143_016": {
+      "fingerprint": "ff25b0d5b0a9fc5bea8e01a9d7ad7ba3d0b0c39495d083099451bf30e1162990",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0143_036": {
+      "fingerprint": "b5c1fd860b9e5fb9f7be21d0b7a08deda991c231962bef8486e676f565767d53",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0143_055": {
+      "fingerprint": "ede50a7ea3997cb78b511c3ff68dc6d0511d74cbd779dd06326231782b9c6cd2",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0144_004": {
+      "fingerprint": "d1b0247acce24c8b17e12ae618fbf2082a8012226b83d512da12bf467aa3c814",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0144_023": {
+      "fingerprint": "4fdf6c983ffc6ff473587f25a919981d9d7d70fcc6c5a2d0f816176e52c77478",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0144_042": {
+      "fingerprint": "62e671a6d79b63b2b1a93eebf8f9bfe86d844317c3893be41682ea55f0d93c78",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "landwirtschaft"
+      ],
+      "terms": [
+        "Ackerbau"
+      ]
+    },
+    "hr_0144_062": {
+      "fingerprint": "9651dfc5b1e07dc9d36b93a5d2c8ef06675bf5ab9ce0f590ef9008ec9b5e79d4",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "bewegung"
+      ],
+      "terms": []
+    },
+    "hr_0145_005": {
+      "fingerprint": "687a47063d06f7229365f3646af29dfb4f2938323fb90866ef26ed37825b194b",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "natur"
+      ],
+      "terms": [
+        "Wetter"
+      ]
+    },
+    "hr_0145_024": {
+      "fingerprint": "96a144d197c5698ee58e462e9664b2b518beda42cdea32771bcc93b5e1429018",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0145_044": {
+      "fingerprint": "f095f1b4f4e9aac52ec768a444546e18b093695001dddcfcb56ce50e77c90f1a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0145_063": {
+      "fingerprint": "2b161d992eee75711e1c10206e23c6261258b21df415a26e05cbfae732dc16dc",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "landwirtschaft"
+      ],
+      "terms": [
+        "Ackerbau"
+      ]
+    },
+    "hr_0146_008": {
+      "fingerprint": "0187b3977b0460630e0cdad113ed91de2c930282632643021f393e6a33cb0b2d",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0146_027": {
+      "fingerprint": "c59d9ccc713437b58aa0cc380bdd68ff02e3c518ad76ce0b481378ace2d4c40c",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "kleidung"
+      ],
+      "terms": [
+        "Schuh",
+        "Schuhe"
+      ]
+    },
+    "hr_0146_046": {
+      "fingerprint": "98c06b6143f53d6f991bd6f93aeed341a6e71eb9f138458aade62efe411ba53a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "gefuehle"
+      ],
+      "terms": []
+    },
+    "hr_0146_066": {
+      "fingerprint": "723222b1122b2ed55c688f57ac227c19334a134522f8419db307a77f2106c3c1",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "kleidung",
+        "pflanzen"
+      ],
+      "terms": [
+        "Baum",
+        "Bäume",
+        "Schuh",
+        "Schuhe"
+      ]
+    },
+    "hr_0147_018": {
+      "fingerprint": "2e39d48c9c582efe452b528b2bc41be7d0c8af4d20fb0322ac9179fc961c0d3a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "gefuehle",
+        "kleidung"
+      ],
+      "terms": [
+        "Bekleidung",
+        "Schuh",
+        "Schuhe"
+      ]
+    },
+    "hr_0147_037": {
+      "fingerprint": "4a78baf12c5714e84f53d8dada316e20ae841ed85566952023dec13df79c9908",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0147_057": {
+      "fingerprint": "78e7314ec6a8e169384911774e3bf690987b981518e333a0128d13d56b6db98a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0148_005": {
+      "fingerprint": "564244e8f885870f240d1d5170ca245f5b5358517a5c3b693a666189593e04b1",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0148_025": {
+      "fingerprint": "65ebd048d53136fb6967addb2769b907fbbef45918e07849a5a8dd3dfdb41ea7",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0148_044": {
+      "fingerprint": "e1893a3a647a428090d334e5c7cb6aab36a1dae01caeee249ea95f663ab26e2b",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "landwirtschaft"
+      ],
+      "terms": [
+        "Ackerbau"
+      ]
+    },
+    "lr_0148_063": {
+      "fingerprint": "c7d33a4a8da0853325b3b8c4a588e38ba536b9d8b213f83d84c73571eb57220a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0149_012": {
+      "fingerprint": "150ae71e9d9148db4caece2888b3bd9337ebc7b4a9d9c1c575eb135f73361baf",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0149_031": {
+      "fingerprint": "65e56ba1bd40452eeffb9a88fb4f0a3e39beae517d9602fd16bd79ff36973395",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "bewegung"
+      ],
+      "terms": []
+    },
+    "lr_0149_050": {
+      "fingerprint": "c3b1ee694edb51c450c8eba29b15168773e552afc0f0c64ed0101534938f4515",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0149_070": {
+      "fingerprint": "a940d2b7bd76c5c58fe8c7e18de7a331d0e22872fd928f3051c0738461acc691",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0150_017": {
+      "fingerprint": "597dba75fdcc2452df822a5b45ec1bf490454db9290aa1df4b30eea7b25b7aa8",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0150_037": {
+      "fingerprint": "a47280ce8dff54e37234b37bfb782581c869290e9024b16d76800052d8128138",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "kleidung"
+      ],
+      "terms": [
+        "Bekleidung",
+        "Kleidung"
+      ]
+    },
+    "hr_0150_056": {
+      "fingerprint": "afb5943f467ec5704f4e759f52d924078d69d8334291f64adbd556ddea11780a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "kleidung"
+      ],
+      "terms": [
+        "Schuh",
+        "Schuhe"
+      ]
+    },
+    "hr_0151_004": {
+      "fingerprint": "f335b18cad9b2182094fb4f34addcc688e329c9924c4a367dd3585777d492f97",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "kleidung"
+      ],
+      "terms": [
+        "Bekleidung"
+      ]
+    },
+    "hr_0151_024": {
+      "fingerprint": "e010c9ca19cf0aad7de24ae0829dfb0e8f95b8797ef78fb023f1dbaabbd2f8f0",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0151_043": {
+      "fingerprint": "cf82e40247cfa3d0e1ea47670b5e8f08034a46bba89be08fb5e87164fae059a1",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "natur"
+      ],
+      "terms": [
+        "Natur",
+        "Wetter"
+      ]
+    },
+    "hr_0151_061": {
+      "fingerprint": "d0d060248d3c6f3ae5f3fe0f00699ceca1ea5ee091340b5c096fa05728a7b709",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0152_006": {
+      "fingerprint": "9fe95228b71feb20aa089d830d00ca89603c3ed7463a1b078774c2bdf9962e41",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0152_025": {
+      "fingerprint": "959bf016c7b42178c93535ec346e0621ec40ebb275607a3a6d8f8e6958822d66",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "haus"
+      ],
+      "terms": [
+        "Möbel"
+      ]
+    },
+    "lr_0152_045": {
+      "fingerprint": "a84776cada21b8b7848cf3d7ae90676e80b6dd4087f26ded26a3bf9a6b881453",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "gefuehle"
+      ],
+      "terms": []
+    },
+    "lr_0152_064": {
+      "fingerprint": "9d087a3f0901b054b2dcb555b0b655d66e151c2f3af3850c8fab52e0c3fe06c5",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "bewegung",
+        "essen",
+        "gefuehle"
+      ],
+      "terms": [
+        "Essen",
+        "Lebensmittel"
+      ]
+    },
+    "lr_0153_014": {
+      "fingerprint": "b6621a44b1cfeb78fa3ecd19eb321afd8a6db6fe0baffb583d4cbbf9a9b0e1da",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "kleidung"
+      ],
+      "terms": [
+        "Bekleidung"
+      ]
+    },
+    "lr_0153_034": {
+      "fingerprint": "958b8aaa26420b548b6b892148523d7b8904861a848dfc6cddb1b52967851e0f",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0153_053": {
+      "fingerprint": "fd372cad4b2fbff7a67e928e24a9a366e7f3e24a14c774d70491ab6b383273c4",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0153_072": {
+      "fingerprint": "a6544df7b0c3ccf590ccb8b077faa773fba433a9978211dca9b5451374ae8eca",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "natur"
+      ],
+      "terms": [
+        "Wetter"
+      ]
+    },
+    "hr_0154_020": {
+      "fingerprint": "4a5f02ec5e4a963e0f030a92e1cbbb3cdf3a6890c3c39f011ffdf28cff3e52b5",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0154_039": {
+      "fingerprint": "fc499e41eac7d12fdb7942c89e964acec5be7c4db653714ae208d9b7a858a614",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "tiere"
+      ],
+      "terms": [
+        "Fisch",
+        "Fische",
+        "Wassertier"
+      ]
+    },
+    "hr_0154_059": {
+      "fingerprint": "d635e6299ef9735d14724ae6414a548d44def750f81a59d9b1de542516f34a20",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0155_005": {
+      "fingerprint": "43d0d3e852ca631a04a102c977de722515413f5cdbb6df5f721fbb7c7fd7c790",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [
+        "landwirtschaft",
+        "natur"
+      ],
+      "terms": [
+        "Ackerbau",
+        "Wetter"
+      ]
+    },
+    "hr_0155_024": {
+      "fingerprint": "9d481b63129c36e8281ab7b61c802d52b36a17d2063f9653988a8d713abbe6d9",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0155_044": {
+      "fingerprint": "4b20988e737ba05d7824f9f52e5f5877febe344160cabbe6c30b98fabd2c799c",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "hr_0155_063": {
+      "fingerprint": "db7f45432e44fd60aaa6d600c8d489e30c67cf436f97bef562cef270abb18a0c",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0156_007": {
+      "fingerprint": "f6781b2a34409feb68ba79faa1fc537b0fe5472e5c89a5968bb7260f1e2caf4c",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0156_027": {
+      "fingerprint": "4b588611dca17f7cba91da49bbd78ebed90c27f0252913dd343f636fc55a708e",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    },
+    "lr_0156_046": {
+      "fingerprint": "b96cdb16628ad058ae51eab86760d97ae53695b842b123885e87c40e5502ad1a",
+      "engine": "local-model-v1",
+      "model": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+      "topics": [],
+      "terms": []
+    }
+  }
+}
