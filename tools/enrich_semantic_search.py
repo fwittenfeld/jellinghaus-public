@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bounded CPU classification with downloaded model weights; no inference API."""
+"""Incremental CPU classification with downloaded model weights; no inference API."""
 import argparse
 import csv
 import json
@@ -98,16 +98,25 @@ def classify_batch(batch, classifier):
     return validate_results({"entries": results}, batch)
 
 
+def pending_rows(rows, cache, limit=0):
+    pending = [row for row in rows if cache.get(row["id"], {}).get("fingerprint") != fingerprint(row)
+               or cache.get(row["id"], {}).get("engine") != ENGINE]
+    # Zero means all outstanding entries; positive limits are only for pilot runs.
+    if limit > 0 and len(pending) > limit:
+        pending = [pending[i * len(pending) // limit] for i in range(limit)]
+    return pending
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--csv", type=Path, default=Path("output/jellinghaus_extraction.csv"))
     parser.add_argument("--cache", type=Path, default=Path("output/semantic_cache.json"))
     parser.add_argument("--dictionary", type=Path, help="Enrich an existing public dictionary instead of the source CSV")
-    parser.add_argument("--limit", type=int, default=150)
+    parser.add_argument("--limit", type=int, default=0, help="Maximum entries for a pilot; default 0 processes all pending entries")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
-    if not 1 <= args.limit <= 3000:
-        parser.error("--limit must be between 1 and 3000")
+    if args.limit < 0:
+        parser.error("--limit must be zero (all pending entries) or positive")
     if args.dictionary:
         payload = json.loads(args.dictionary.read_text(encoding="utf-8"))
         rows = [{"id": entry["id"], "quelle": entry["source"], "ziel": entry["target"]}
@@ -116,11 +125,8 @@ def main():
         with args.csv.open(encoding="utf-8", newline="") as handle:
             rows = list(csv.DictReader(handle, delimiter=";"))
     cache = load_cache(args.cache)
-    pending = [row for row in rows if cache.get(row["id"], {}).get("fingerprint") != fingerprint(row)
-               or cache.get(row["id"], {}).get("engine") != ENGINE]
-    if len(pending) > args.limit:
-        pending = [pending[i * len(pending) // args.limit] for i in range(args.limit)]
-    print(f"Pending in this run: {len(pending)}; cached: {len(cache)}")
+    pending = pending_rows(rows, cache, args.limit)
+    print(f"Total entries: {len(rows)}; pending in this run: {len(pending)}; cached: {len(cache)}", flush=True)
     if args.dry_run or not pending:
         return
     # Lazy imports keep builds, tests and dry-runs independent of ML packages.

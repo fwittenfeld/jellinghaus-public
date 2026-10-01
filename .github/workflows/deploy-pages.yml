@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       enrich_semantics:
-        description: Bis zu 150 fehlende/geänderte Einträge mit freiem CPU-Modell erschließen
+        description: Alle fehlenden/geänderten Einträge mit freiem CPU-Modell erschließen
         type: boolean
         default: true
 
@@ -44,7 +44,7 @@ jobs:
         env:
           HF_HUB_DISABLE_TELEMETRY: "1"
           TOKENIZERS_PARALLELISM: "false"
-        run: python tools/enrich_semantic_search.py --dictionary web/data/dictionary.json --cache web/data/semantic-cache.json --limit 150
+        run: python tools/enrich_semantic_search.py --dictionary web/data/dictionary.json --cache web/data/semantic-cache.json
       - name: Suchdaten für weitere Läufe erhalten
         run: |
           git config user.name "github-actions[bot]"
