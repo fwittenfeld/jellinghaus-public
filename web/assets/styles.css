@@ -164,6 +164,9 @@ main { margin-top: -2.4rem; }
 
 footer { display: flex; justify-content: space-between; gap: 1rem; padding: 2rem 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
 footer p { margin: 0; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+.legal-section { padding-bottom: clamp(3rem, 6vw, 5rem); }
+.legal-section address { font-style: normal; }
 
 .entry-dialog {
   width: min(680px, calc(100% - 1.5rem)); max-height: calc(100vh - 2rem); padding: 0; border: 0;
