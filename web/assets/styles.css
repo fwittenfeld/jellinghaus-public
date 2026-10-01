@@ -179,6 +179,16 @@ footer p { margin: 0; }
 .detail-grid dt, .detail-grid dd { margin: 0; padding: .7rem 0; border-bottom: 1px solid var(--line); }
 .detail-grid dt { color: var(--muted); font-family: system-ui, sans-serif; font-size: .75rem; font-weight: 700; }
 .detail-grid dd { overflow-wrap: anywhere; }
+.semantic-details { margin-top: 1.8rem; border-top: 1px solid var(--line); }
+.topic-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+.topic-tags span { padding: .3rem .65rem; border: 1px solid var(--line); border-radius: 2rem; font-size: .9rem; }
+.related-words { list-style: none; margin: .6rem 0; padding: 0; }
+.related-words li { display: flex; align-items: center; border-bottom: 1px solid var(--line); }
+.related-words button[data-related-id] { flex: 1; min-width: 0; padding: .65rem 0; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.related-words button[data-related-id]:hover { color: var(--green-2); }
+.related-words small { display: block; margin-top: .2rem; color: var(--muted); font-size: .8rem; }
+.related-target, .semantic-note { color: var(--muted); }
+.semantic-note { font-size: .85rem; line-height: 1.5; }
 
 @media (max-width: 800px) {
   :root { font-size: 17px; }

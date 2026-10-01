@@ -176,6 +176,44 @@ function playEntry(entry, button) {
   });
 }
 
+function relatedEntries(entry, limit = 5) {
+  const topics = new Set(entry.topics || []);
+  const terms = new Set((entry.semanticTerms || []).map(normalize));
+  if (!topics.size && !terms.size) return [];
+  const frequency = new Map();
+  state.entries.forEach(item => new Set((item.semanticTerms || []).map(normalize))
+    .forEach(term => frequency.set(term, (frequency.get(term) || 0) + 1)));
+  const seen = new Set([entry._source]);
+  return state.entries.filter(item => item.id !== entry.id)
+    .map(item => {
+      const sharedTopics = (item.topics || []).filter(id => topics.has(id)).length;
+      const sharedTerms = [...new Set((item.semanticTerms || []).map(normalize))].filter(term => terms.has(term));
+      const score = sharedTopics + sharedTerms.reduce((sum, term) => sum + 2 + Math.log(1 + state.entries.length / frequency.get(term)), 0);
+      return { entry: item, score };
+    })
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score || collator.compare(a.entry.source, b.entry.source) || a.entry.id.localeCompare(b.entry.id))
+    .filter(item => {
+      if (seen.has(item.entry._source)) return false;
+      seen.add(item.entry._source); return true;
+    }).slice(0, limit).map(item => item.entry);
+}
+
+function semanticDetailsHtml(entry) {
+  const topics = (entry.topics || []).map(id => state.meta.topics?.[id]).filter(Boolean);
+  const related = relatedEntries(entry);
+  if (!topics.length && !related.length) return "";
+  return `<section class="semantic-details" aria-label="Thematische Einordnung">
+    ${topics.length ? `<h3>Themen</h3><p class="topic-tags">${topics.map(label => `<span>${escapeHtml(label)}</span>`).join("")}</p>` : ""}
+    ${related.length ? `<h3>Thematisch ähnliche Wörter</h3><ul class="related-words">${related.map(item => `<li>
+      <button type="button" data-related-id="${escapeHtml(item.id)}"><span>${sourceHtml(item)} <span class="related-target">– ${escapeHtml(item.target)}</span></span>
+      <small>${escapeHtml((item.topics || []).map(id => state.meta.topics?.[id]).filter(Boolean).join(" · "))}</small></button>
+      ${item.hasAudio ? `<button class="icon-button audio-button" type="button" data-audio-id="${escapeHtml(item.id)}" aria-label="Aussprache von ${escapeHtml(item.source)} abspielen">▶</button>` : ""}
+    </li>`).join("")}</ul>` : ""}
+    <p class="semantic-note">Automatische thematische Zuordnung — keine zusätzliche Buchangabe.</p>
+  </section>`;
+}
+
 function showDetails(entry) {
   const rows = [
     ["Seitenzahl", entry.page],
@@ -190,8 +228,9 @@ function showDetails(entry) {
       <h3>Schreibweise in der Buchvorlage</h3>
       <dl class="detail-grid">${rows.map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd>`).join("")}</dl>
       <a class="text-link" href="${escapeHtml(entry.archiveUrl)}" target="_blank" rel="noopener">Buchseite im Internet Archive öffnen <span aria-hidden="true">↗</span></a>
+      ${semanticDetailsHtml(entry)}
     </div>`;
-  elements.entryDialog.showModal();
+  if (!elements.entryDialog.open) elements.entryDialog.showModal();
   history.replaceState(null, "", `#wort-${entry.id}`);
 }
 
@@ -224,6 +263,22 @@ function bindEvents() {
   elements.audioPlayer.addEventListener("ended", () => {
     state.currentAudioButton?.classList.remove("playing");
     state.currentAudioButton = null;
+  });
+  elements.dialogContent.addEventListener("click", (event) => {
+    const audioButton = event.target.closest("[data-audio-id]");
+    if (audioButton) {
+      const entry = state.entries.find(item => item.id === audioButton.dataset.audioId);
+      if (entry) playEntry(entry, audioButton);
+      return;
+    }
+    const relatedButton = event.target.closest("[data-related-id]");
+    if (!relatedButton) return;
+    const entry = state.entries.find(item => item.id === relatedButton.dataset.relatedId);
+    if (entry) {
+      showDetails(entry);
+      elements.entryDialog.scrollTop = 0;
+      elements.entryDialog.querySelector(".dialog-close").focus();
+    }
   });
   elements.entryDialog.addEventListener("click", (event) => {
     if (event.target === elements.entryDialog) elements.entryDialog.close();

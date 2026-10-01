@@ -4,15 +4,20 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      enrich_semantics:
+        description: Bis zu 150 fehlende/geänderte Einträge mit freiem CPU-Modell erschließen
+        type: boolean
+        default: true
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -20,9 +25,42 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v6
+      - name: Python einrichten
+        if: github.event_name == 'push' || inputs.enrich_semantics == true
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: CPU-Modellbibliotheken installieren
+        if: github.event_name == 'push' || inputs.enrich_semantics == true
+        run: |
+          python -m pip install 'torch>=2.6,<3' --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'transformers>=4.48,<5' sentencepiece
+      - name: Suchdaten ohne Inference-API berechnen
+        if: github.event_name == 'push' || inputs.enrich_semantics == true
+        env:
+          HF_HUB_DISABLE_TELEMETRY: "1"
+          TOKENIZERS_PARALLELISM: "false"
+        run: python tools/enrich_semantic_search.py --dictionary web/data/dictionary.json --cache web/data/semantic-cache.json --limit 150
+      - name: Suchdaten für weitere Läufe erhalten
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/data/dictionary.json web/data/semantic-cache.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Automatische Themen und Suchbegriffe ergänzen"
+            git push origin HEAD:main
+          fi
+      - name: Teilergebnisse bei fehlgeschlagenem Lauf sichern
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: semantic-cache-recovery
+          path: web/data/semantic-cache.json
+          if-no-files-found: ignore
       - name: Pages konfigurieren
         uses: actions/configure-pages@v5
       - name: Website-Artefakt hochladen
