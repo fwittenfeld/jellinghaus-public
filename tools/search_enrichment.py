@@ -3,14 +3,20 @@ import hashlib
 import json
 import re
 
-VERSION = 2
+VERSION = 3
 TOPICS = {
     "tiere": "Tiere", "pflanzen": "Pflanzen", "essen": "Essen & Trinken",
     "landwirtschaft": "Landwirtschaft", "haus": "Haus & Alltag",
     "koerper": "Körper & Gesundheit", "kleidung": "Kleidung",
-    "natur": "Natur & Wetter", "menschen": "Menschen & Zusammenleben",
+    "natur": "Natur & Wetter", "menschen": "Menschen, Familie & Gesellschaft",
     "arbeit": "Arbeit & Handwerk", "bewegung": "Bewegung",
-    "gefuehle": "Gefühle & Eigenschaften",
+    "gefuehle": "Gefühle & Verhalten",
+    "eigenschaften": "Eigenschaften & Zustände", "handlungen": "Tätigkeiten & Vorgänge",
+    "sprache": "Sprache & Wissen", "raum": "Raum & Lage", "zeit": "Zeit",
+    "mengen": "Zahlen, Mengen & Maße", "handel": "Geld & Handel",
+    "material": "Materialien & Stoffe", "religion": "Religion & Glaubenswelt",
+    "spiel": "Spiel, Musik & Brauchtum", "namen": "Namen & Orte",
+    "grundwoerter": "Sprachliche Grundwörter",
 }
 
 # Only used for German meanings. No blanket th -> t replacement (e.g. Thymian).
@@ -102,9 +108,10 @@ def enrichment(row, cache):
     if row["id"] == "lr_0129_004":
         aliases.append(source.replace("ſ", "s"))
     saved = cache.get(row["id"], {})
-    if saved.get("fingerprint") == fingerprint(row) and saved.get("engine") == "local-model-v1":
+    if saved.get("fingerprint") == fingerprint(row) and saved.get("engine") in ("local-model-v2", "codex-review-v1"):
         return {"modernMeaning": modern, "searchAliases": aliases,
-                "topics": saved["topics"], "semanticTerms": saved["terms"], "semanticOrigin": "local-model"}
+                "topics": saved["topics"], "semanticTerms": saved["terms"],
+                "semanticOrigin": "ai-review" if saved.get("engine") == "codex-review-v1" else "local-model"}
     topics, terms = [], []
     for topic, pattern, keywords in HINTS:
         if re.search(pattern, modern, re.I):

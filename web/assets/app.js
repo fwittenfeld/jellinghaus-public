@@ -210,7 +210,7 @@ function semanticDetailsHtml(entry) {
       <small>${escapeHtml((item.topics || []).map(id => state.meta.topics?.[id]).filter(Boolean).join(" · "))}</small></button>
       ${item.hasAudio ? `<button class="icon-button audio-button" type="button" data-audio-id="${escapeHtml(item.id)}" aria-label="Aussprache von ${escapeHtml(item.source)} abspielen">▶</button>` : ""}
     </li>`).join("")}</ul>` : ""}
-    <p class="semantic-note">Automatische thematische Zuordnung — keine zusätzliche Buchangabe.</p>
+    <p class="semantic-note">KI-gestützte thematische Zuordnung — nicht fachlich geprüft und keine zusätzliche Buchangabe.</p>
   </section>`;
 }
 

@@ -8,7 +8,7 @@ from pathlib import Path
 from search_enrichment import TOPICS, VERSION, enrichment, entry_input, fingerprint
 
 MODEL = "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli"
-ENGINE = "local-model-v1"
+ENGINE = "local-model-v2"
 # Fixed labels constrain the experiment: the model does not invent definitions.
 LABELS = {
     "ein Tier": ("tiere", []),
@@ -22,7 +22,19 @@ LABELS = {
     "eine Person oder soziale Beziehung": ("menschen", []),
     "einen Beruf oder eine handwerkliche Arbeit": ("arbeit", ["Handwerk"]),
     "eine Bewegung": ("bewegung", []),
-    "ein Gefühl oder eine Charaktereigenschaft": ("gefuehle", []),
+    "ein Gefühl": ("gefuehle", []),
+    "eine Eigenschaft oder einen Zustand": ("eigenschaften", []),
+    "eine allgemeine Tätigkeit oder einen Vorgang": ("handlungen", []),
+    "etwas aus Sprache, Lernen oder Wissen": ("sprache", []),
+    "eine räumliche Lage oder Richtung": ("raum", []),
+    "einen Zeitpunkt oder eine Zeitdauer": ("zeit", []),
+    "eine Zahl, Menge oder Maßeinheit": ("mengen", []),
+    "etwas aus Geld, Kauf oder Handel": ("handel", []),
+    "ein Material oder einen Werkstoff": ("material", []),
+    "etwas aus Religion oder Glaubenswelt": ("religion", []),
+    "ein Spiel, Musik oder einen Brauch": ("spiel", []),
+    "einen Personen- oder Ortsnamen": ("namen", []),
+    "ein grammatisches Funktionswort": ("grundwoerter", []),
     "einen Fisch": ("tiere", ["Fisch", "Fische", "Wassertier"]),
     "einen Vogel": ("tiere", ["Vogel", "Vögel"]),
     "ein Insekt": ("tiere", ["Insekt", "Insekten"]),
@@ -100,7 +112,7 @@ def classify_batch(batch, classifier):
 
 def pending_rows(rows, cache, limit=0):
     pending = [row for row in rows if cache.get(row["id"], {}).get("fingerprint") != fingerprint(row)
-               or cache.get(row["id"], {}).get("engine") != ENGINE]
+               or cache.get(row["id"], {}).get("engine") not in (ENGINE, "codex-review-v1")]
     # Zero means all outstanding entries; positive limits are only for pilot runs.
     if limit > 0 and len(pending) > limit:
         pending = [pending[i * len(pending) // limit] for i in range(limit)]
@@ -154,7 +166,7 @@ def main():
         by_id = {row["id"]: row for row in rows}
         for entry in payload["entries"]:
             entry.update(enrichment(by_id[entry["id"]], cache))
-        payload["meta"]["semanticCount"] = sum(entry["semanticOrigin"] == "local-model" for entry in payload["entries"])
+        payload["meta"]["semanticCount"] = sum(entry["semanticOrigin"] in ("local-model", "ai-review") for entry in payload["entries"])
         temp = args.dictionary.with_suffix(".tmp")
         temp.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         temp.replace(args.dictionary)
