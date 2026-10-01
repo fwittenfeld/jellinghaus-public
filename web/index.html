@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Das Wallenbrücker Wörterbuch nach Hermann Jellinghaus – durchsuchbar und mit gesprochenen Einträgen.">
+  <meta name="theme-color" content="#173f3a">
+  <title>Wallenbrücker Wörterbuch</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#woerterbuch">Zum Wörterbuch</a>
+
+  <header class="hero">
+    <nav class="topbar" aria-label="Hauptnavigation">
+      <a class="wordmark" href="#oben" aria-label="Wallenbrücker Wörterbuch – Startseite">
+        <span aria-hidden="true">W</span>
+        <strong>Wallenbrücker Wörterbuch</strong>
+      </a>
+      <div class="nav-links">
+        <a href="#woerterbuch">Wörterbuch</a>
+        <a href="#projekt">Über das Projekt</a>
+      </div>
+    </nav>
+
+    <div class="hero-content" id="oben">
+      <p class="eyebrow">Plattdeutsch aus Wallenbrück</p>
+      <h1>Wörter, die Heimat hörbar machen.</h1>
+      <p class="hero-lead">
+        Das historische Wörterbuch von Hermann Jellinghaus – neu erschlossen,
+        gut lesbar und mit eingesprochenen Wallenbrücker Wörtern.
+      </p>
+      <a class="primary-button" href="#woerterbuch">Im Wörterbuch suchen</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats" aria-label="Statistik zum Wörterbuch">
+      <div><strong id="statEntries">–</strong><span>Einträge</span></div>
+      <div><strong id="statAudio">–</strong><span>vertont</span></div>
+      <div><strong id="statPages">–</strong><span>Buchseiten</span></div>
+      <div><strong id="statUpdated">–</strong><span>Datenstand</span></div>
+    </section>
+
+    <section class="dictionary-section" id="woerterbuch" aria-labelledby="dictionaryHeading">
+      <div class="section-heading">
+        <p class="eyebrow">Nachschlagen &amp; anhören</p>
+        <h2 id="dictionaryHeading">Das Wörterbuch</h2>
+        <p>Suche auf Plattdeutsch oder Hochdeutsch. Auch ähnliche Schreibweisen werden gefunden.</p>
+      </div>
+
+      <div class="search-panel">
+        <label for="search">Wonach suchst du?</label>
+        <div class="search-row">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="search" type="search" autocomplete="off" spellcheck="false"
+                 placeholder="z. B. ådder oder Verbindungskette">
+          <button id="clearSearch" class="clear-button" type="button" hidden>Suche löschen</button>
+        </div>
+        <div class="filter-row">
+          <label class="checkbox-label">
+            <input id="audioOnly" type="checkbox">
+            <span>Nur Wörter mit Aussprache</span>
+          </label>
+          <p id="resultCount" aria-live="polite">Wörterbuch wird geladen …</p>
+        </div>
+      </div>
+
+      <nav id="alphabet" class="alphabet" aria-label="Nach Anfangsbuchstaben filtern"></nav>
+
+      <div id="loadError" class="notice error" hidden>
+        Das Wörterbuch konnte nicht geladen werden. Bitte versuche es später noch einmal.
+      </div>
+      <div id="dictionary" class="dictionary" aria-live="polite"></div>
+    </section>
+
+    <section class="about-section" id="projekt" aria-labelledby="aboutHeading">
+      <div class="about-card source-card">
+        <p class="eyebrow">Die historische Quelle</p>
+        <h2 id="aboutHeading">Ein Wörterbuch von 1885 – für heute erschlossen</h2>
+        <p>
+          Grundlage ist Hermann Friedrich Jellinghaus’
+          <cite>Westfälische Grammatik. Die Laute und Flexionen der Ravensbergischen Mundart,
+          mit einem Wörterbuche</cite>, erschienen 1885 in Norden.
+        </p>
+        <p>
+          Das digitalisierte Buch kann vollständig beim Internet Archive eingesehen werden.
+          Die Wörterbuchseiten beginnen dort auf Seite 116.
+        </p>
+        <a id="archiveSourceLink" class="text-link" href="https://archive.org/details/westflischegra00jelluoft/page/116/mode/2up"
+           target="_blank" rel="noopener">Original im Internet Archive ansehen <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="about-card credits-card">
+        <p class="eyebrow">Gemeinschaftsarbeit</p>
+        <h2>Wer hinter dem Projekt steht</h2>
+        <dl class="credits">
+          <div><dt>Aufarbeitung &amp; Stimme</dt><dd>Gerhard Heining</dd></div>
+          <div><dt>Fachliche Unterstützung</dt><dd>Dr. Robert Damme</dd></div>
+          <div><dt>Technische Betreuung</dt><dd>Felix Wittenfeld</dd></div>
+        </dl>
+        <p class="small-note">
+          Eingesprochen sind die fett gesetzten Wallenbrücker Begriffe. Historische und
+          vorsichtig regularisierte Schreibweisen werden in den Details eines Eintrags kenntlich gemacht.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ein digitales Wörterbuch für Wallenbrück und die Ravensberger Region.</p>
+    <a href="#oben">Nach oben ↑</a>
+  </footer>
+
+  <dialog id="entryDialog" class="entry-dialog" aria-labelledby="dialogTitle">
+    <form method="dialog"><button class="dialog-close" aria-label="Detailansicht schließen">×</button></form>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <audio id="audioPlayer" preload="none"></audio>
+</body>
+</html>
